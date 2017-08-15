@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Todo</string>
+    <string name="etHint">Enter New Todo</string>
+    <string name="btnName">Add Todo</string>
+    <string name="title_activity_main">Todo</string>
+    <string name="title_activity_edit_item">Edit Item</string>
+    <string name="save">"Save"</string>
+    <string name="enter_item_textview">"Edit Item Below"</string>
+
+</resources>
