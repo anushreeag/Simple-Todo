@@ -1,7 +1,9 @@
 package com.cosmic.todo;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TodoActivity extends Activity {
+public class TodoActivity extends AppCompatActivity {
 
     ListView lv ;
     EditText et;
@@ -45,11 +47,27 @@ public class TodoActivity extends Activity {
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int pos, long l) {
+                final String item = items.get(pos);
+                AlertDialog.Builder builder =new AlertDialog.Builder(TodoActivity.this);
+                builder.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        items.remove(item);
+                        writeItemstoFile();
+                        lv.setAdapter(todoAdp);
+                    }
+                });
 
-                items.remove(pos);
-                writeItemstoFile();
-                lv.setAdapter(todoAdp);
-                return false;
+                builder.setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Do nothing
+                    }
+                });
+                builder.setMessage(getResources().getString(R.string.delete_todo));
+                AlertDialog dialog = builder.create();
+                dialog.show();
+                return true;
             }
         });
 

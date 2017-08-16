@@ -6,7 +6,7 @@ Simple Todo Application
 
 Submitted by: **Anushree Ganjam**
 
-Time spent: **9** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -28,12 +28,13 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
+* [x] Alert dialog support - On Long click of the item prompts the user whether to delete Todo or not?
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/1dg7q6m.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/4RYpX23.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).

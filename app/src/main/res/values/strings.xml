@@ -6,5 +6,7 @@
     <string name="title_activity_edit_item">Edit Item</string>
     <string name="save">"Save"</string>
     <string name="enter_item_textview">"Edit Item Below"</string>
-
+    <string name="delete_todo">"Delete Todo?"</string>
+    <string name="ok">"Ok"</string>
+    <string name="cancel">"Cancel"</string>
 </resources>
